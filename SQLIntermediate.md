@@ -38,9 +38,9 @@ The result of using an inner join on the ```supplier_id``` would display all row
 ```supplier_id``` from the suppliers table matches the ```supplier_id``` from the orders table.
 The image below illustrates the intersection of the data that would be returned from this join.
 
-
-![innerjoin](images/inner_join.gif)
-
+<p align="center">
+  <img src="images/inner_join.gif"/>
+</p>
 
 Now, lets try it out!
 
@@ -95,14 +95,20 @@ The result should be the following:
 
 ## LEFT OUTER JOIN
 
-![leftouterjoin](images/left_outer_join.gif)
+<p align="center">
+  <img src="images/left_outer_join.gif"/>
+</p>
 
 ## RIGHT OUTER JOIN
 
-![rightouterjoin](images/right_outer_join.gif)
+<p align="center">
+  <img src="images/right_outer_join.gif"/>
+</p>
 
 ## FULL OUTER JOIN
 
-![fullouterjoin](images/full_outer_join.gif)
+<p align="center">
+  <img src="images/full_outer_join.gif"/>
+</p>
 
 [Next: SQL Advanced](SQLAdvanced.md)
