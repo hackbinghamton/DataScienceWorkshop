@@ -28,16 +28,15 @@ SQL as a Transaction Control Language manages transaction made in the database, 
 SQL as a Data Control Language controls accesses to databases.
 
 #### Applications
-SQL programming language can be used with anything that uses databases.
+SQL programming language can be used with anything that uses databases. A few example are:
 
 * health care - patient records
 * business - trends, sales, inventory
-* website displaying data
-*
+* website displaying analyzed data
 
 ## Resources
-* ..
-
-[in progress]
+* [w3schools](https://www.w3schools.com/sql/default.asp)
+* [Code Academy](https://www.codecademy.com/learn/learn-sql)
+* [Tutorial that goes more in depth with MS SQL Server](http://www.sqlservertutorial.net/)
 
 [Next: SQL Beginner](SQLBeginner.md)
