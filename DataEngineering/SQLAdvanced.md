@@ -126,5 +126,5 @@ Resources:
 * [Tutorial Gateway](https://www.tutorialgateway.org/stored-procedures-in-sql/)
 
 ## Challenge
-Now that you have completed all of the SQL sections, try creating your own database tables on [SQL Fiddle](sqlfiddle.com) and applying the
+Now that you have completed all of the SQL sections, try creating your own database tables on [SQL Fiddle](https://www.sqlfiddle.com) and applying the
 concepts from each of the difficulty levels to your own data!
