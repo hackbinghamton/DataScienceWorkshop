@@ -14,6 +14,10 @@ The [Data Engineering](DataEngineering/) portion of the workshop covers SQL, a r
 
 To get started, choose the section that most interests you!
 
-# Feedback
+## Bug Bounties
+
+Starting today, if you find a bug or mistake in our workshop, let an organizer know or make a pull request fixing it! We'll be handing out special HackBU stickers to those who find bugs/mistakes, and as always, we'll be giving stickers away to some random respondents from our feedback form.
+
+## Feedback
 
 If you attended our workshop on 10/2/19, please leave feedback [here](https://forms.gle/WyVb2LZHJooUhAo39).
