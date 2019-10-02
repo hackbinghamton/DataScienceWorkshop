@@ -101,7 +101,7 @@ SELECT name, id FROM Students;
 
 #### SELECT DISTINCT
 The DISTINCT statement is used with the SELECT statement. Tacking on DISTINCT after SELECT means to fetch data that is unique (ignore duplicated values).
-Update your SELECT statement so that the query outputs only the unique data in the Students table.
+Update your SELECT statement so that the query outputs only the unique names from the Students table.
 
 #### WHERE
 The WHERE statement is used to filter data using conditions. Only data that satisfies the conditions in the WHERE clause will be fetched. Comparison, arithmetic, bitwise, and logical operators can be used to set conditions. For example, the following code will fetch all students who are Seniors:
