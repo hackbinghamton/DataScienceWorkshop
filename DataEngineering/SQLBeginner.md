@@ -85,8 +85,6 @@ VALUES
     ('George', 339, 'Geology', 'Junior')
 
 ;
-
-
 ```
 
 #### SELECT
@@ -166,7 +164,7 @@ SELECT * FROM Students
 ORDER BY id;
 ```
 
-The following code will fetch all data and print them out by id in descending order, then by major in ascending order.
+The following code will fetch all data and print them out by id in descending order, then by major in ascending order if any of the rows have the same id values.
 ```
 SELECT * FROM Students
 ORDER BY id DESC, name;
