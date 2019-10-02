@@ -4,13 +4,14 @@
 
 In this workshop, we will be tackling a variety of topics divided into two sections: Data Science | Data Engineering.
 
-The Data Science portion of the workshop will cover *insert topics being covered*.
+The Data Science portion of the workshop will cover Data Analysis (Numpy and Pandas) and Data visulization (Plotly).
 
 The Data Engineering portion of the workshop will cover an in-depth tutorial on SQL (specifically, Microsoft SQL Server), as well as data streaming with Apache Kafka.
 
 # Data Science
 
-*Update with workshop structure*
+* [NumPy](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/NumPy.ipynb) and [Pandas](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/Pandas.ipynb)
+* [Plotly](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/plotly.ipynb)
 
 # Data Engineering
 
@@ -22,8 +23,8 @@ For those who may already feel comfortable with the basics of SQL and select sta
 
 Lastly, if you are already experienced in SQL and data retrieval, check out the [advanced SQL section](SQLAdvanced.md). This section covers database table creation and management, as well as a glimpse into stored procedures. In order to perform the queries in the beginner and intermediate sections, it is important to understand how the databases themselves are maintained and updated!
 
-*need to add apache kafka section*
+If you want to learn more about a big data streaming service, read more about [Kafka](KafkaIntro.md).
 
 # Feedback
 
-If you attended our workshop on 10/2/19, please leave feedback *insert feedback form link*.
+If you attended our workshop on 10/2/19, please leave feedback [here](https://forms.gle/WyVb2LZHJooUhAo39).
