@@ -63,7 +63,7 @@ SELECT * FROM tableName; /* This is an inline comment */
 To practice using SQL, this workshop will be using an online application called <a href="http://sqlfiddle.com" target="blank"> sqlfiddle.com </a>
 The left hand box is called the Schema Panel and that is where you create your data table. The right hand box is called the Query Panel and that is where you access the data you created on the left. In this beginner section, the data will be given so you can focus on creating queries and accessing the data. The [advanced SQL section](SQLAdvanced.md) of this workshop will go more in depth about database table creation.
 
-To begin, click [here](http://sqlfiddle.com/#!18/0cf11) to open up the sql text editor with an already created data table. <b>Make sure that you are under MS SQL Server 2017 on the top, then press the "Build Schema" button. </b> If the code on the left hand side box does not appear, copy and paste the code below. The code creates a new table called "Students" that has four attributes: name, id, major, and year. Then we add new Student data into the table.
+To begin, click [here](http://sqlfiddle.com/#!18/ccca2) to open up the sql text editor with an already created data table. <b>Make sure that you are under MS SQL Server 2017 on the top, then press the "Build Schema" button. </b> If the code on the left hand side box does not appear, copy and paste the code below. The code creates a new table called "Students" that has four attributes: name, id, major, and year. Then we add new Student data into the table.
 
 
 ```
@@ -74,17 +74,16 @@ CREATE TABLE Students
 INSERT INTO Students
     ([name], [id], [major], [year])
 VALUES
+    ('Dillion', 420, 'Architecture', 'Senior'),
     ('Adam', 420, 'Architecture', 'Senior'),
-    ('Adam', 420, 'Architecture', 'Senior'),
+    ('Zack', 420, 'Architecture', 'Senior'),
     ('Bob', 101, 'Biology', 'Freshman'),
     ('Bob', 102, 'Biology', 'Freshman'),
     ('Caroline', 222, 'Computer Science', 'Sophomore'),
     ('Dylan', 132, 'Dentistry', 'Freshman'),
     ('Eveline', 309, 'Economics', 'Junior'),
     ('Frank', 400, 'Forensic Science', 'Senior'),
-    ('George', 339, 'Geology', 'Junior')
-
-;
+    ('George', 339, 'Geology', 'Junior');
 ```
 
 #### SELECT
@@ -164,7 +163,7 @@ SELECT * FROM Students
 ORDER BY id;
 ```
 
-The following code will fetch all data and print them out by id in descending order, then by major in ascending order if any of the rows have the same id values.
+The following code will fetch all data and print them out by id in descending order, then by major in ascending order if any of the rows have the same id values. For example, notice that for id = 420 the rows are in order by ascending name as well (Adam, Dillion, Zack).
 ```
 SELECT * FROM Students
 ORDER BY id DESC, name;
