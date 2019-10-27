@@ -27,4 +27,4 @@ If you want to learn more about a big data streaming service, read more about [K
 
 # Feedback
 
-If you attended our workshop on 10/2/19, please leave feedback [here](https://forms.gle/WyVb2LZHJooUhAo39).
+If you attended our workshop, please leave feedback [here](https://forms.gle/WyVb2LZHJooUhAo39).
