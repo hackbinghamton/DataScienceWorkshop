@@ -8,7 +8,7 @@ In this workshop, we'll be covering two very hot topics in tech - data science a
 
 * Data Science involves analyzing data to establish trends/patterns and make decisions.
 
-The [Data Science](DataScience/) portion of the workshop covers Data Analysis (Numpy and Pandas) and Data Visulization (Matplotlib and Plotly).
+The [Data Science](DataScience/) portion of the workshop covers Data Analysis (Numpy and Pandas) and Data Visualization (Matplotlib and Plotly).
 
 The [Data Engineering](DataEngineering/) portion of the workshop covers SQL, a relational database query language, and Apache Kafka, a data streaming platform.
 
