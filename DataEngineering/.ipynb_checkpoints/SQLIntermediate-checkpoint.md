@@ -1,10 +1,21 @@
 # Intermediate SQL
 ## Overview
+### What You'll Learn
+In this section you'll learn:
 * SELECT Statements using JOIN
   * INNER JOIN (aka Simple Join)
   * LEFT OUTER JOIN (aka LEFT JOIN)
   * RIGHT OUTER JOIN (aka RIGHT JOIN)
   * FULL OUTER JOIN (aka FULL JOIN)
+
+### Prerequisites
+Before starting this section you should have an understanding of: 
+* An understanding of select statements
+* How to retrieve data from a table
+
+### Introduction
+In this section you will be introduced to ```JOIN``` statements. You will learn how they are used and 
+when each statement is applicable. In this section there are exercises to follow along with that use the included data set. You will use SQLFiddle, which is linked below.
 
 ## SELECT Statements using JOIN
 Now that you are familiar with using select statements to retrieve specific data from a table,
@@ -187,5 +198,18 @@ The result should be the following:
 |    10002    |    Microsoft    |   (null)   |
 |    10003    |      NVIDIA     |   (null)   |
 |    (null)   |      (null)     | 2003-05-14 |
+
+
+### Mini Project
+Given the following data set, perfrom the following instructions to retrieve data.
+```
+#Enter Data Set Here
+```
+
+* Perform a right join to retrieve common data between both data sets while also
+  including all data from the right data set.
+* Perfrom an inner join to retrieve all common data between the two sets.
+* Perform an outer join to retrieve all data between both sets.
+
 
 [Next: SQL Advanced](SQLAdvanced.md)

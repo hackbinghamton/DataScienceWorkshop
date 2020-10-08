@@ -1,14 +1,14 @@
 # Introduction to SQL
 ## Overview
 ### What You'll Learn
-In this section you'll learn what databases are and how they are used, as well as what SQL is. Additionally, you'll learn the basic commands used in SQL, including syntax and comments. Additionally, you will perform a few exercises using SQLFiddle to reinforce this information, which will start in the statements section. A more comprehensive list of the topics covered is below:
-1. Database and Database Management Systems
-2. What is SQL?
-3. SQL Uses and Applications
-4. Resources
-5. Syntax
-6. Commenting
-7. SQL Statements
+In this section you'll learn:
+* Database and Database Management Systems
+* What is SQL?
+* SQL Uses and Applications
+* Resources
+* Syntax
+* Commenting
+* SQL Statements
   * SELECT
   * SELECT DISTINCT
   * WHERE
@@ -26,6 +26,9 @@ In this section you'll learn what databases are and how they are used, as well a
   * ORDER BY
   * GROUP BY
   * HAVING
+
+### Introduction
+In this section you will learn what databases are and how they are used, as well as what SQL is. Additionally, you'll learn the basic commands used in SQL, including syntax and comments. Additionally, you will perform a few exercises using SQLFiddle to reinforce this information, which will start in the statements section.
 
 ## Database and Database Management Systems
 Databases store a collection of data. Using database management systems, users can access databases, modify, manipulate, and represent the data stored in the database.
@@ -111,7 +114,8 @@ To begin, click [here](http://sqlfiddle.com/#!18/ccca2) to open up the sql text 
 
 ```
 CREATE TABLE Students
-    ([name] varchar(13), [id] int, [major] varchar(30), [year] varchar(10));
+    ([name] varchar(13), [id] int, [major] varchar(30), [year] varchar(10))
+;
 
 
 INSERT INTO Students
