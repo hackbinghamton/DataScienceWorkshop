@@ -1,20 +1,33 @@
 # NoSQL and MongoDB 📄
 
-In this section we're going to be chatting about some alternative forms of data storage. Don't worry if that sounds complicated, though, that's just a fancy way to say "databases other than SQL"! This section is going to cover MongoDB, which is a NoSQL database. What is "NoSQL," you ask? Well, you've come to the right place, becuase we're going to explain what that is too!
+## Overview
+### You Will Learn
+In this section you will learn:
+1. What NoSQL is and the differences between NoSQL and SQL
+2. What MongoDB is
+3. How to set up a MongoDB account
+4. How to query data in MongoDB
 
-*Note: Since this is a data science workshop, we'll be mainly covering how to query data that is already present in the database. To learn more about inputting and manipulating data, please refer to the [documentation](https://docs.mongodb.com/), there is a wealth of knowledge here!*
+### Prerequisites
+None
+
+### Introduction
+
+In this section we're going to be chatting about some alternative forms of data storage. Don't worry if that sounds complicated, though, that's just a fancy way to say "databases other than SQL"! This section is going to cover MongoDB, which is a NoSQL database. What is "NoSQL," you ask? Well, you've come to the right place, because we're going to explain what that is too!
+
+*Note: We'll be mainly covering how to query data that is already present in the database. To learn more about inputting and manipulating data, please refer to the [documentation](https://docs.mongodb.com/), there is a wealth of knowledge here!*
 
 ## What is NoSQL? 🗃
 
-MongoDB is a NoSQL databse, so before talking about MongoDB, it's important to understand what NoSQL is. Let's dive into that, shall we?
+MongoDB is a NoSQL database, so before talking about MongoDB, it's important to understand what NoSQL is. Let's dive into that, shall we?
 
 ### An SQL Refresher 💨
 
-You may already know a bit about SQL and what it is (if not, then you might find the SQL section to be helpful). In a nutshell, SQL stands for "Structured Query Language" and SQL databases are just that -- structured. Heavily structured. All the data is organized into tables, and all the tables have to conform to some schema. A schema is essentially an outline that defines how a database will organize it's data. There are some huge benefits from this, but it also makes application developemnt a bit difficult.
+You may already know a bit about SQL and what it is (if not, then you might find the SQL section to be helpful). In a nutshell, SQL stands for "Structured Query Language" and SQL databases are just that -- structured. Heavily structured. All the data is organized into tables, and all the tables have to conform to some schema. A schema is essentially an outline that defines how a database will organize it's data. There are some huge benefits from this, but it also makes application development a bit difficult.
 
 ### SQL Pains 🤒
 
-The strictness of SQL schemas is great when you know exactly what you're trying to build. You can easily define a schema that will hold all the data that your app will need. But problems start to creep up when the exact form of your app's data isn't set in stone. This happens a lot with startups or proof-of-concept projects. Sometimes the exact schema of an application's data isn't known. 
+The strictness of SQL schemas is great when you know exactly what you're trying to build. You can easily define a schema that will hold all the data that your app will need. But problems start to creep up when the exact form of your app's data isn't set in stone. This happens a lot with startups or proof-of-concept projects. Sometimes the exact schema of an application's data isn't known.
 
 As a rudimentary example, let's think about a university. In order to maintain a database of all the students, it would need to keep track of the following student information:
 
@@ -26,13 +39,13 @@ Now imagine that this information was used to design the schema for the student 
 
 ### NoSQL to the Rescue! 🚒
 
-So we've talked about SQL and why it can be hard to work with sometimes. And that means the stage has been set for understanding what NoSQL is! Essentially, A NoSQL Database is any database that doesn't follow the same form as an SQL one (i.e. tables). Pretty broad, right?! There are many types of NoSQL Databses, here are a few examples:
+So we've talked about SQL and why it can be hard to work with sometimes. And that means the stage has been set for understanding what NoSQL is! Essentially, A NoSQL Database is any database that doesn't follow the same form as an SQL one (i.e. tables). Pretty broad, right?! There are many types of NoSQL Databases, here are a few examples:
 
 - Graph Databases
 - Key-Value Databases
 - Document Databases
 
-Today, we're going to be focusing on that last type of NoSQL database: document daabases, and we're going to be looking at one specific implentation of it: MongoDB.
+Today, we're going to be focusing on that last type of NoSQL database: document databases, and we're going to be looking at one specific implementation of it: MongoDB.
 
 The beauty of NoSQL databases is that they are much less strict with their schemas. If the structure of your data is bound to change, then a NoSQL database might be the choice for you! These databases can also become pretty fast, which means they can offer a lot to products trying to use something other than SQL.
 
@@ -40,9 +53,9 @@ Let's dive into MongoDB to see the beauty of NoSQL databases.
 
 *Note: NoSQL doesn't stand for what you (probably) think it stands for. It's easy to look at the name and assume that it means "No SQL," but you'd be mistaken! NoSQL actually stands for "not only SQL." The trust issues are real.*
 
-### MongoDB and Document Basics 🐣
+## MongoDB and Document Basics 🐣
 
-MongoDB is a document oriented database, which is just one of the many types of NoSQL databases out in the wild. A document is an object that holds information as a list of key-value pairs. These values of these pairs can also be nested documents, which means that documents can get very complex very fast. If you know what JSON is, then you can think of it that way, it's very simily. 
+MongoDB is a document oriented database, which is just one of the many types of NoSQL databases out in the wild. A document is an object that holds information as a list of key-value pairs. These values of these pairs can also be nested documents, which means that documents can get very complex very fast. If you know what JSON is, then you can think of it that way, it's very simily.
 
 It's much easier to understand documents when looking at examples, so let's do that! Here's an example document:
 
@@ -67,22 +80,22 @@ This document has three fields, Each field has a name and value. For example, th
 }
 ```
 
-In the above example, we use an integer as the data type for `"favorite-number"`, an array for `"favorite-foods"`, and another object for `"favorite-movie"`! 
+In the above example, we use an integer as the data type for `"favorite-number"`, an array for `"favorite-foods"`, and another object for `"favorite-movie"`!
 
 Document databases store documents in collections. A collection is simply grouping of documents. Document databases can have multiple collections.
 
-Those are the basics of documents. If you want to know more, check out [MongoDB's documentation](https://docs.mongodb.com/). They have an incredible amount resources, including [MongoDB University](https://university.mongodb.com/), where you can take self-paced courses to master the database for the low price of *free*. 
+Those are the basics of documents. If you want to know more, check out [MongoDB's documentation](https://docs.mongodb.com/). They have an incredible amount resources, including [MongoDB University](https://university.mongodb.com/), where you can take self-paced courses to master the database for the low price of *free*.
 
-### Query Basics 🐥
+## Query Basics 🐥
 
-Now that we've seen what the data looks like, we need to learn how to actually *query* it. To query data basically means to ask the databse for some information. The database returns results based on what you requested. 
+Now that we've seen what the data looks like, we need to learn how to actually *query* it. To query data basically means to ask the databse for some information. The database returns results based on what you requested.
 
-For the following examples, we're going to define some sample data. 
+For the following examples, we're going to define some sample data.
 
 ```
 database (db): HackBU
 collection: orgs (short for "organizers")
-data: 
+data:
 {
     "name": "Colin",
     "age": 22,
@@ -98,7 +111,7 @@ data:
     "specialty": "Telling awesome puns",
     "favorite-foods": ["pizza", "burgers", "ice cream"],
     "common-sayings": ["bruhh", "nah but yeah", "that's crazy"]
-    
+
 }
 ```
 *Note that this isn't a 100% accurate representation of how MongoDB stores data. It's meant to show the data we're working with (in the following queries) in a (somewhat) easy-to-understand format!*
@@ -109,7 +122,7 @@ Let's look at a simple query and understand how it works!
 // query
 db.orgs.find()
 
-// result 
+// result
 {
     "name": "Colin",
     "age": 22,
@@ -125,7 +138,7 @@ db.orgs.find()
     "specialty": "Telling awesome puns",
     "favorite-foods": ["pizza", "burgers", "ice cream"],
     "common-sayings": ["bruhh", "nah but yeah", "that's crazy"]
-    
+
 }
 ```
 
@@ -170,11 +183,11 @@ db.orgs.find({"age": {$gt: 22}})
     "specialty": "Telling awesome puns",
     "favorite-foods": ["pizza", "burgers", "ice cream"],
     "common-sayings": ["bruhh", "nah but yeah", "that's crazy"]
-    
+
 }
 ```
 
-For this query, the database returns all the documents representing organizers who are older than 22 years old. To do this, we pass the following document into the `find()` function: 
+For this query, the database returns all the documents representing organizers who are older than 22 years old. To do this, we pass the following document into the `find()` function:
 
 ```
 {"age": {$gt: 22}}
@@ -300,7 +313,7 @@ You already know the basics of making queries (from earlier in this section), so
 
 Let's put your knowledge (and documentation research skills) to the test!
 
-## Scavenger Hunt! 🗺
+## Exercise: Scavenger Hunt! 🗺
 
 To test out what you've learned in this section here are some questions about the data in the `sample_mflix` database. Use the mongo shell to query the data and find the answers!
 
