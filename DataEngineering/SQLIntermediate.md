@@ -2,19 +2,18 @@
 ## Overview
 ### What You'll Learn
 In this section you'll learn:
-* SELECT Statements using JOIN
+1. SELECT Statements using JOIN
   * INNER JOIN (aka Simple Join)
   * LEFT OUTER JOIN (aka LEFT JOIN)
   * RIGHT OUTER JOIN (aka RIGHT JOIN)
   * FULL OUTER JOIN (aka FULL JOIN)
 
 ### Prerequisites
-Before starting this section you should have an understanding of: 
-* An understanding of select statements
-* How to retrieve data from a table
+Before starting this section you should have an understanding of:
+1. How to retrieve data in SQL - [Beginner SQL portion](SQLBeginner.md)
 
 ### Introduction
-In this section you will be introduced to ```JOIN``` statements. You will learn how they are used and 
+In this section you will be introduced to ```JOIN``` statements. You will learn how they are used and
 when each statement is applicable. In this section there are exercises to follow along with that use the included data set. You will use SQLFiddle, which is linked below.
 
 ## SELECT Statements using JOIN
@@ -26,11 +25,11 @@ table contains columns ```supplier_id``` and ```supplier_name```. On the other h
 table contains 3 columns: ```order_id```, ```supplier_id```, and ```order_date```. How would you
 go about retrieving a combination of data from the suppliers table and the orders table?
 
-```JOIN``` is used to retrieve data from not one, but multiple tables. There are four different
+`JOIN` is used to retrieve data from not one, but multiple tables. There are four different
 types of JOINs and each will be shown below with an example.
 
 ## INNER JOIN
-```INNER JOIN``` is the most common type of join. Inner joins are used to combine all rows from
+`INNER JOIN` is the most common type of join. Inner joins are used to combine all rows from
 multiple tables where a specific join condition is met.
 
 <b>What is a join condition?</b>
@@ -39,8 +38,8 @@ together. In our example above, we notice that both the suppliers table and the 
 contain a column called ```supplier_id```. We can use this column as the join condition to
 combine the information from both tables into one table.
 
-The result of using an inner join on the ```supplier_id``` would display all rows where a
-```supplier_id``` from the suppliers table matches the ```supplier_id``` from the orders table.
+The result of using an inner join on the ```supplier_id``` would display all rows where a `supplier_id` from the suppliers table matches the ```supplier_id``` from the orders table.
+
 The image below illustrates the intersection of the data that would be returned from this join.
 
 <p align="center">
@@ -200,16 +199,52 @@ The result should be the following:
 |    (null)   |      (null)     | 2003-05-14 |
 
 
-### Mini Project
-Given the following data set, perfrom the following instructions to retrieve data.
+## Exercise
+Given the following data set, perform the following instructions to retrieve data.
+
 ```
-#Enter Data Set Here
+CREATE TABLE winners
+    ([winner_id] int, [entrant_id] int, [sport] varchar(100), [medal] varchar(100))
+;
+
+INSERT INTO winners
+    ([winner_id], [entrant_id], [sport], [medal])
+VALUES
+    ('1', '500', 'Basketball', 'gold'),
+    ('2', '201', 'Basketball', 'silver'),
+    ('3', '343', 'Swimming', 'gold'),
+    ('4', '332', 'Ultimate Frisbee', 'gold'),
+    ('5', '101', 'Soccer', 'gold'),
+    ('6', '189', 'Soccer', 'silver'),
+    ('7', '176', 'Soccer', 'bronze')
+;
+
+CREATE TABLE entrants
+    ([entrant_id] int, [name] varchar(100), [age] int, [gender] varchar(100))
+;
+
+INSERT INTO entrants
+    ([entrant_id], [name], [age], [gender])
+VALUES  
+    ('101', 'Steven S', '20', male),
+    ('116', 'Maria M', '21', 'female')
+    ('126', 'Patrick P', '23', 'male'),
+    ('176', 'Scott S', '21', 'male')
+    ('177', 'Annie A', '20', 'female'),
+    ('189', `Sherry S`, '24', 'female'),
+    ('190', 'Cammie C', '21', 'female'),
+    ('201', Brian B', '22', 'male'),
+    ('332', 'Uri F', '20', 'female'),
+    ('343', Sarah S', '19', 'female'),  
+    ('400', 'Benjamin B', '23', 'male')
+
+;
 ```
 
 * Perform a right join to retrieve common data between both data sets while also
   including all data from the right data set.
-* Perfrom an inner join to retrieve all common data between the two sets.
+* Perform an inner join to retrieve all common data between the two sets.
 * Perform an outer join to retrieve all data between both sets.
 
-
-[Next: SQL Advanced](SQLAdvanced.md)
+## Next Steps
+Head onto our [SQL Advanced](SQLAdvanced.md) section of the workshop to learn how to create and manage tables.

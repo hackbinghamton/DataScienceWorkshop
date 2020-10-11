@@ -1,19 +1,30 @@
 # Advanced SQL
 ## Overview
-* Database Table Creation and Management
-  * Create Table
-  * Drop Table
+
+### What You'll Learn
+In this section, you'll learn:
+
+1. How to create and manage database tables
+  * Create
+  * Drop
   * Insert Into
   * Update
-* Stored Procedures
+2. What stored procedures are
 
-## Database Table Creation and Management
+### Prerequisites
+
+1. [Beginner](SQLBeginner.md) and [Intermediate](SQLIntermediate.md) SQL
+
+### Introduction
+
 Welcome to the advanced section of SQL! In the previous sections, we covered queries and in-depth information
 on select statements. Now, we will focus on how to manage the tables that were created for the examples from
 the prior sections. This section will cover creating tables, dropping tables, inserting into tables, and
-updating values stored within tables.
+updating values stored within tables. Follow along using [SQL Fiddle](http://sqlfiddle.com).
 
-## Create Table
+## Database Table Creation and Management
+
+### Create Table
 In the examples prior, we used two tables: suppliers and orders to demonstrate how the various joins work.
 In order to create the tables that we created queries for, we need to use the ```CREATE TABLE``` function.
 The code for creating the tables from the examples is below:
@@ -91,7 +102,7 @@ The format of the ```INSERT INTO``` function is as follows, "suppliers" or "orde
 the values in the parenthesis are a comma separated list specifying the name of the columns in brackets. After this,
 we must specific ```VALUES``` which contains a list of single-quoted values surrounded by parenthesis which contain
 the values to be inserted into the columns specified in the brackets above. For example, in the suppliers table,
-```('10000','IBM')``` indicates that "<b>10000</b>" will be inserted into the ```supplier_id``` column and "<b>IBM</b>" will be
+`('10000','IBM')` indicates that "<b>10000</b>" will be inserted into the ```supplier_id``` column and "<b>IBM</b>" will be
 inserted into the ```supplier_name``` column. By running the above code in the schema portion of SQL Fiddle, we will now
 have created a table which can be accessed using the queries from the previous sections.
 
@@ -107,8 +118,7 @@ WHERE supplier_id = 10000;
 SELECT * FROM suppliers;
 ```
 
-<b>Be careful when updating records in a table! Notice the ```WHERE``` clause in the ```UPDATE``` statement. The ```WHERE``` clause
-specifies which record(s) that should be updated. If you omit the ```WHERE``` clause, all records in the table will be updated!
+**Be careful when updating records in a table! Notice the `WHERE` clause in the `UPDATE` statement. The `WHERE` clause specifies which record(s) that should be updated. If you omit the `WHERE` clause, all records in the table will be updated!**
 
 The format of the ```UPDATE``` function is as follows, "suppliers" is the name of the table, "supplier_name = 'HackBU'" is the change
 to be made when the ```WHERE``` condition is ```true```, and "supplier_id = 10000" is the condition that must be true in order to
@@ -125,6 +135,6 @@ Resources:
 * [w3schools](https://www.w3schools.com/sql/sql_stored_procedures.asp)
 * [Tutorial Gateway](https://www.tutorialgateway.org/stored-procedures-in-sql/)
 
-## Challenge
+## Exercise
 Now that you have completed all of the SQL sections, try creating your own database tables on [SQL Fiddle](http://sqlfiddle.com) and applying the
 concepts from each of the difficulty levels to your own data!

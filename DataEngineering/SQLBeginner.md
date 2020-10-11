@@ -1,14 +1,13 @@
-# Introduction to SQL
+# Beginner SQL
 ## Overview
 ### What You'll Learn
+
 In this section you'll learn:
-* Database and Database Management Systems
-* What is SQL?
-* SQL Uses and Applications
-* Resources
-* Syntax
-* Commenting
-* SQL Statements
+* What Database and Database Management Systems are
+* What SQL is
+* Uses and Applications of SQL
+* SQL Syntax
+* Basic SQL Statements
   * SELECT
   * SELECT DISTINCT
   * WHERE
@@ -27,45 +26,42 @@ In this section you'll learn:
   * GROUP BY
   * HAVING
 
+### Prerequisites
+
+None!
+
 ### Introduction
-In this section you will learn what databases are and how they are used, as well as what SQL is. Additionally, you'll learn the basic commands used in SQL, including syntax and comments. Additionally, you will perform a few exercises using SQLFiddle to reinforce this information, which will start in the statements section.
+
+Databases are crucial to organize and manage large amounts of data. In this section, you will learn what databases are and how to access them using a query language called SQL. To become familiar with the SQL language, this workshop will use [SQLFiddle](http://sqlfiddle.com/) as a playground for you to practice and reinforce what you learn in this section.
 
 ## Database and Database Management Systems
-Databases store a collection of data. Using database management systems, users can access databases, modify, manipulate, and represent the data stored in the database.
 
-One type of database management system is the relational database management system (RDBMS). Relational means that data has relationship with other data in the database. Most often, a relational database stores data in tables consisting of rows and columns. Popular RDBMS's are Microsoft SQL Server, MySQL, and oracle.
+A database is a collection of data, a place to store and access information. Database management systems (DBMS) are systems that manage how to interact with a database. DBMS defines how users can access, modify, and manipulate data in a database.
+
+One type of database management system is the relational database management system (RDBMS). Relational means that data has relationships with other data in the database in the form of rows and columns. Relational databases are essentially a group of data tables. Popular RDBMS's are Microsoft SQL Server, MySQL, and Oracle.
 
 ## What is SQL?
 SQL stands for Structured Query Language (pronounced as "sequel" or "S-Q-L"). It is a programming language used to access relational databases.
 
-SQL syntax between DBMS are very similar, but there are slight differences. This workshop will be using syntax for a popular RDBMS: Microsoft SQL Server (MS SQL Server).
+SQL syntax between DBMS are very similar, but there are slight differences. This workshop will be using syntax for a popular RDBMS called Microsoft SQL Server (MS SQL Server).
 
 ## SQL Uses and Applications
-#### Uses
-SQL has four main uses as a Data Definition Language (DDL), Data Manipulation Language (DML), Transaction Control Language (TCL), and Data Control Language (DCL).
 
-SQL as a Data Definition Language defines databases and labels data with additional properties.
+SQL has four main uses as a Data Definition Language (DDL), Data Manipulation Language (DML), Transaction Control Language (TCL), and Data Control Language (DCL):
 
-SQL as a Data Manipulation Language manages data in the database.
+1. SQL as a Data Definition Language defines databases and labels data with additional properties.
 
-SQL as a Transaction Control Language manages transaction made in the database, such as any changes to the database from DML statements.
+2. SQL as a Data Manipulation Language manages data in the database.
 
-SQL as a Data Control Language controls accesses to databases.
+3. SQL as a Transaction Control Language manages transaction made in the database, such as any changes to the database from DML statements.
 
-#### Applications
+4. SQL as a Data Control Language controls accesses to databases.
+
 SQL programming language can be used with anything that uses databases. A few example are:
 
 * health care - patient records
 * business - trends, sales, inventory
 * website displaying analyzed data
-
-## Resources
-* [w3schools](https://www.w3schools.com/sql/default.asp)
-* [Code Academy](https://www.codecademy.com/learn/learn-sql)
-* [Tutorial that goes more in depth with MS SQL Server](http://www.sqlservertutorial.net/)
-
-
-# Beginner SQL
 
 ## Syntax
 Relational databases are represented as tables. Each table is identified by a name. In MS SQL, the names of tables are in quotes ```"tableName" ```. Tables are made up of rows (also called records) and columns.
@@ -109,7 +105,7 @@ SELECT * FROM tableName; /* This is an inline comment */
 To practice using SQL, this workshop will be using an online application called <a href="http://sqlfiddle.com" target="blank"> sqlfiddle.com </a>
 The left hand box is called the Schema Panel and that is where you create your data table. The right hand box is called the Query Panel and that is where you access the data you created on the left. In this beginner section, the data will be given so you can focus on creating queries and accessing the data. The [advanced SQL section](SQLAdvanced.md) of this workshop will go more in depth about database table creation.
 
-To begin, click [here](http://sqlfiddle.com/#!18/ccca2) to open up the sql text editor with an already created data table. <b>Make sure that you are under MS SQL Server 2017 on the top, then press the "Build Schema" button. </b> If the code on the left hand side box does not appear, copy and paste the code below. The code creates a new table called "Students" that has four attributes: name, id, major, and year. Then we add new Student data into the table.
+To begin, click [on this SQLFiddle link](http://sqlfiddle.com/#!18/ccca2) to open up the sql text editor that is already set up to create a data table. <b>Make sure that you are under MS SQL Server 2017 on the top, then press the "Build Schema" button. </b> If the code on the left hand side box does not appear, copy and paste the code below. The code creates a new table called "Students" that has four attributes: name, id, major, and year. Then we add new Student data into the table.
 
 
 ```
@@ -236,7 +232,7 @@ GROUP BY year
 HAVING COUNT(id) > 2;
 ```
 
-### Mini Project
+## Exercise
 In this project, you will be creating a library database to hold information about books, given data values. Once you have copied the below code into SQLFiddle, you can perform a few operations on this to see how you can retrieve data.
 ```
 CREATE TABLE Books
@@ -248,12 +244,12 @@ INSERT INTO Books
 
 VALUES
     ('Drew Harper', 'Epic Gamer Moves', 200, 'academic')
-    ('AJ Stenland', 'How To Hack', 350, 'mystery')
-    ('Juhnson Jean-Baptiste', 'Cooking with Juhnson', 999, 'necessary')
+    ('AJ Stensland', 'How To Hack', 350, 'mystery')
+    ('Junhson Jean-Baptiste', 'Cooking with Junhson', 999, 'necessary')
     ('Colin Fiutak', 'The Art of the KD Tree', 420, 'fiction')
     ('Theresa Gundel', 'Fearless Leadership', 87, 'must-read')
-    ('Meave Farrell', 'Buff Kirby', 100, 'nonfiction')
-    ('Allison Garity', 'Learn Programming', 5, 'short story')
+    ('Maeve Farrell', 'Buff Kirby', 100, 'nonfiction')
+    ('Allison Garrity', 'Learn Programming', 5, 'short story')
 
 ```
 
@@ -261,7 +257,8 @@ Here are some exercises to try on this data:
 * Find the sum of all of the pages in the books.
 * Select all books where by genres end in a 'y'.
 * If a book has less than or equal to 100 pages and the authors name starts with 'A', retrieve the tiles.
-* Retrieve only book titles in ascending order. 
+* Retrieve only book titles in ascending order.
 
+## Next Steps
 
-[Next: SQL Intermediate](SQLIntermediate.md)
+Go onto the next portion of SQL to learn more about intermediate SQL like joins -- [SQL Intermediate](SQLIntermediate.md)
