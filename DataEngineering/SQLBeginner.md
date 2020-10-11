@@ -3,11 +3,11 @@
 ### What You'll Learn
 
 In this section you'll learn:
-* What Database and Database Management Systems are
-* What SQL is
-* Uses and Applications of SQL
-* SQL Syntax
-* Basic SQL Statements
+1. What Database and Database Management Systems are
+2. What SQL is
+3. Uses and Applications of SQL
+4. SQL Syntax
+5. Basic SQL Statements
   * SELECT
   * SELECT DISTINCT
   * WHERE
@@ -233,22 +233,23 @@ HAVING COUNT(id) > 2;
 ```
 
 ## Exercise
-In this project, you will be creating a library database to hold information about books, given data values. Once you have copied the below code into SQLFiddle, you can perform a few operations on this to see how you can retrieve data.
+Here is a library dataset that holds information about books. Here is the [SQLFiddle](http://sqlfiddle.com/#!18/11e678) with the dataset created, or you can copy the code below. Perform a few operations on this to see how you can use the SQL queries you've learned in this section to retrieve data.
+
 ```
 CREATE TABLE Books
 
-    ([author] varchar(20), [title] varchar(30), [pages] int, [genre] varchar(15));
+    ([author] varchar(100), [title] varchar(100), [pages] int, [genre] varchar(100));
 
 INSERT INTO Books
     ([author], [title], [pages], [genre])
 
 VALUES
-    ('Drew Harper', 'Epic Gamer Moves', 200, 'academic')
-    ('AJ Stensland', 'How To Hack', 350, 'mystery')
-    ('Junhson Jean-Baptiste', 'Cooking with Junhson', 999, 'necessary')
-    ('Colin Fiutak', 'The Art of the KD Tree', 420, 'fiction')
-    ('Theresa Gundel', 'Fearless Leadership', 87, 'must-read')
-    ('Maeve Farrell', 'Buff Kirby', 100, 'nonfiction')
+    ('Drew Harper', 'Epic Gamer Moves', 200, 'academic'),
+    ('AJ Stensland', 'How To Hack', 350, 'mystery'),
+    ('Junhson Jean-Baptiste', 'Cooking with Junhson', 999, 'necessary'),
+    ('Colin Fiutak', 'The Art of the KD Tree', 420, 'fiction'),
+    ('Theresa Gundel', 'Fearless Leadership', 87, 'must-read'),
+    ('Maeve Farrell', 'Buff Kirby', 100, 'nonfiction'),
     ('Allison Garrity', 'Learn Programming', 5, 'short story')
 
 ```

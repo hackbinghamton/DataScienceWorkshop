@@ -138,3 +138,7 @@ Resources:
 ## Exercise
 Now that you have completed all of the SQL sections, try creating your own database tables on [SQL Fiddle](http://sqlfiddle.com) and applying the
 concepts from each of the difficulty levels to your own data!
+
+## Next Steps
+
+Now that you've become familiar with SQL syntax and queries, check out the [Python/MySQL section](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/PythonMySQL.ipynb) of this workshop to learn how to use SQL queries in Python.

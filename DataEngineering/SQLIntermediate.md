@@ -3,18 +3,18 @@
 ### What You'll Learn
 In this section you'll learn:
 1. SELECT Statements using JOIN
-  * INNER JOIN (aka Simple Join)
-  * LEFT OUTER JOIN (aka LEFT JOIN)
-  * RIGHT OUTER JOIN (aka RIGHT JOIN)
-  * FULL OUTER JOIN (aka FULL JOIN)
+    * INNER JOIN
+    * LEFT OUTER JOIN
+    * RIGHT OUTER JOIN
+    * FULL OUTER JOIN
 
 ### Prerequisites
 Before starting this section you should have an understanding of:
 1. How to retrieve data in SQL - [Beginner SQL portion](SQLBeginner.md)
 
 ### Introduction
-In this section you will be introduced to ```JOIN``` statements. You will learn how they are used and
-when each statement is applicable. In this section there are exercises to follow along with that use the included data set. You will use SQLFiddle, which is linked below.
+In this section, you will be introduced to `JOIN` statements. You will learn how they are used and
+when each statement is applicable. In this section there are exercises to follow along with that use the included data set. You will use SQLFiddle to follow along.
 
 ## SELECT Statements using JOIN
 Now that you are familiar with using select statements to retrieve specific data from a table,
@@ -200,7 +200,7 @@ The result should be the following:
 
 
 ## Exercise
-Given the following data set, perform the following instructions to retrieve data.
+Given the following data set, perform the following instructions to retrieve data. Here is the [SQLFiddle](http://sqlfiddle.com/#!18/850309) link.
 
 ```
 CREATE TABLE winners
@@ -226,18 +226,17 @@ CREATE TABLE entrants
 INSERT INTO entrants
     ([entrant_id], [name], [age], [gender])
 VALUES  
-    ('101', 'Steven S', '20', male),
-    ('116', 'Maria M', '21', 'female')
+    ('101', 'Steven S', '20', 'male'),
+    ('116', 'Maria M', '21', 'female'),
     ('126', 'Patrick P', '23', 'male'),
-    ('176', 'Scott S', '21', 'male')
+    ('176', 'Scott S', '21', 'male'),
     ('177', 'Annie A', '20', 'female'),
-    ('189', `Sherry S`, '24', 'female'),
+    ('189', 'Sherry S', '24', 'female'),
     ('190', 'Cammie C', '21', 'female'),
-    ('201', Brian B', '22', 'male'),
+    ('201', 'Brian B', '22', 'male'),
     ('332', 'Uri F', '20', 'female'),
-    ('343', Sarah S', '19', 'female'),  
+    ('343', 'Sarah S', '19', 'female'),  
     ('400', 'Benjamin B', '23', 'male')
-
 ;
 ```
 
@@ -245,6 +244,8 @@ VALUES
   including all data from the right data set.
 * Perform an inner join to retrieve all common data between the two sets.
 * Perform an outer join to retrieve all data between both sets.
+
+Now that you know how to retrieve data from tables, check out this fun [murder mystery SQL game](https://mystery.knightlab.com/) and find out who committed the crime! 
 
 ## Next Steps
 Head onto our [SQL Advanced](SQLAdvanced.md) section of the workshop to learn how to create and manage tables.
