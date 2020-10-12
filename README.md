@@ -4,9 +4,9 @@
 
 In this workshop, we'll be covering two very hot topics in tech - data science and data engineering. The difference between these two fields is complicated and oftentimes blurry, but the difference can be summarized as follows:
 
-* Data Engineering involves transporting and cleaning data so that it can be used for analysis.
-
 * Data Science involves analyzing data to establish trends/patterns and make decisions.
+
+* Data Engineering involves transporting and cleaning data so that it can be used for analysis.
 
 ## Sections
 
