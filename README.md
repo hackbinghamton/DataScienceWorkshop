@@ -24,9 +24,9 @@ To get started, choose the section that most interests you!
 
 * [**Data Engineering**](DataEngineering/) portion of the workshop covers SQL and MongoDB, two very popular database systems.
     * [**Beginner SQL**](https://github.com/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/SQLBeginner.md)
-      An introduction to SQL, and how to work with a SQL database on SQLFiddle!
+      An introduction to SQL, and how to work with a SQL database on SQLFiddle with basic commands like `SELECT`!
     * [**Intermediate SQL**](https://github.com/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/SQLIntermediate.md)
-      A focus on operations involving intersections of datasets with JOIN commands
+      A focus on operations involving intersections of datasets with `JOIN` statements!
     * [**Advanced SQL**](https://github.com/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/SQLAdvanced.md)
       Database creation and management, as well as stored procedures!
     * [**MySQL with Python**](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/PythonMySQL.ipynb)
