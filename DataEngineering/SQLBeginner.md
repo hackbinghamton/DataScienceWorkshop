@@ -250,7 +250,7 @@ VALUES
     ('Colin Fiutak', 'The Art of the KD Tree', 420, 'fiction'),
     ('Theresa Gundel', 'Fearless Leadership', 87, 'must-read'),
     ('Maeve Farrell', 'Buff Kirby', 100, 'nonfiction'),
-    ('Allison Garrity', 'Learn Programming', 5, 'short story')
+    ('Alison Garrity', 'Learn Programming', 5, 'short story')
 
 ```
 
