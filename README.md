@@ -22,7 +22,7 @@ To get started, choose the section that most interests you!
     * [**Data Science Mini-Project**](https://colab.research.google.com/github/HackBinghamton/DataScienceWorkshop/blob/master/DataScience/Data%20Science%20Mini-Project.ipynb)
       Use your skills you've gathered to find an answer to a real-world problem!
 
-* [**Data Engineering**](DataEngineering/) portion of the workshop covers SQL and MongoDB, relational database systems,  and Apache Kafka, a data streaming platform.
+* [**Data Engineering**](DataEngineering/) portion of the workshop covers SQL and MongoDB, two very popular database systems.
     * [**Beginner SQL**](https://github.com/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/SQLBeginner.md)
       An introduction to SQL, and how to work with a SQL database on SQLFiddle!
     * [**Intermediate SQL**](https://github.com/HackBinghamton/DataScienceWorkshop/blob/master/DataEngineering/SQLIntermediate.md)
