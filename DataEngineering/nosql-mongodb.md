@@ -23,7 +23,7 @@ MongoDB is a NoSQL database, so before talking about MongoDB, it's important to 
 
 ### An SQL Refresher 💨
 
-You may already know a bit about SQL and what it is (if not, then you might find the SQL section to be helpful). In a nutshell, SQL stands for "Structured Query Language" and SQL databases are just that -- structured. Heavily structured. All the data is organized into tables, and all the tables have to conform to some schema. A schema is essentially an outline that defines how a database will organize it's data. There are some huge benefits from this, but it also makes application development a bit difficult.
+You may already know a bit about SQL and what it is (if not, then you might find the [SQL section](SQLBeginner.md) to be helpful). In a nutshell, SQL stands for "Structured Query Language" and SQL databases are just that -- structured. Heavily structured. All the data is organized into tables, and all the tables have to conform to some schema. A schema is essentially an outline that defines how a database will organize its data. There are some huge benefits from this, but it also makes application development a bit difficult.
 
 ### SQL Pains 🤒
 
@@ -55,7 +55,7 @@ Let's dive into MongoDB to see the beauty of NoSQL databases.
 
 ## MongoDB and Document Basics 🐣
 
-MongoDB is a document oriented database, which is just one of the many types of NoSQL databases out in the wild. A document is an object that holds information as a list of key-value pairs. These values of these pairs can also be nested documents, which means that documents can get very complex very fast. If you know what JSON is, then you can think of it that way, it's very simily.
+MongoDB is a document oriented database, which is just one of the many types of NoSQL databases out in the wild. A document is an object that holds information as a list of key-value pairs. These values of these pairs can also be nested documents, which means that documents can get very complex very fast. If you know what JSON is, then you can think of it that way; they're very similar.
 
 It's much easier to understand documents when looking at examples, so let's do that! Here's an example document:
 
@@ -88,7 +88,7 @@ Those are the basics of documents. If you want to know more, check out [MongoDB'
 
 ## Query Basics 🐥
 
-Now that we've seen what the data looks like, we need to learn how to actually *query* it. To query data basically means to ask the databse for some information. The database returns results based on what you requested.
+Now that we've seen what the data looks like, we need to learn how to actually *query* it. To query data basically means to ask the database for some information. The database returns results based on what you requested.
 
 For the following examples, we're going to define some sample data.
 
@@ -142,9 +142,9 @@ db.orgs.find()
 }
 ```
 
-`db` is MongoDB's way of representing the currently selected databse. Since we can have many databases, the chosen one can be referenced by typing `db` as we see above. We'll learn how to select different databases after we set up a database cluster down below!
+`db` is MongoDB's way of representing the currently selected database. Since we can have many databases, the chosen one can be referenced by typing `db` as we see above. We'll learn how to select different databases after we set up a database cluster down below!
 
-`orgs` is the name of the collection we've selected. As we discussed earlier, a database can have many collections. `orgs` can be anything as long as there is a collection by that same name! So when we type `db.orgs`, we're referring to our currently selected databse and the collection within it that's called  `orgs`.
+`orgs` is the name of the collection we've selected. As we discussed earlier, a database can have many collections. `orgs` can be anything as long as there is a collection by that same name! So when we type `db.orgs`, we're referring to our currently selected database and the collection within it that's called  `orgs`.
 
 `find` is a function that we can call on the database. There are parameters that can be passed into it, but if we simply want to return every document, we would just call `find()` with no parameters!
 
@@ -167,7 +167,7 @@ db.orgs.find({"name": "Colin"})
 }
 ```
 
-Whenever we're passing information into `find()`, it needs to be in the form of a document. In this case we're looking for organizers named "Colin", so we create the following document: `{"name": "Colin"}`. Based on what we learned about documents above, this document specifies a document with the name "`Colin`." The database will return any document that has "Colin" for it's `name` value!
+Whenever we're passing information into `find()`, it needs to be in the form of a document. In this case we're looking for organizers named "Colin", so we create the following document: `{"name": "Colin"}`. Based on what we learned about documents above, this document specifies a document with the name "`Colin`." The database will return any document that has "Colin" for its `name` value!
 
 Let's look at another query:
 
@@ -193,7 +193,7 @@ For this query, the database returns all the documents representing organizers w
 {"age": {$gt: 22}}
 ```
 
-This document contains a nested document (recall that we mentioned documents are allowed to have documents as values for fields)! The MongoDB Query Language has query operators that make it easy for us to query certain types of data. `$gt` is Mongo's query operator for "greater than." If we use this query operator, the database will return all documents where the "`age`" field has a value greater than the speicified value, which is `22` in this case!
+This document contains a nested document (recall that we mentioned documents are allowed to have documents as values for fields)! The MongoDB Query Language has query operators that make it easy for us to query certain types of data. `$gt` is Mongo's query operator for "greater than." If we use this query operator, the database will return all documents where the "`age`" field has a value greater than the specified value, which is `22` in this case!
 
 We can use MongoDB's query operators to make some very interesting queries! Check out [MongoDB's Query Operator documentation](https://docs.mongodb.com/manual/reference/operator/query/) to learn more about how to use them!
 
@@ -201,20 +201,20 @@ Now that we know a bit about MongoDB, let's set up our own database so we can ap
 
 ## Setting Up MongoDB 🍃
 
-There are two primary ways to use MongoDB to store our data. The first option is to download MongoDB and run it on a *server* (in this case, locally on your own computer). The second option is to use MongoDB's service called *Atlas*. MongoDB Atlas is a convenint option for developers looking to focus on their code and not on managing a physical server. Atlas facilitates the management of a running MongoDB on the cloud (using AWS, GCP, or Azure) so that developers don't have to worry about it.
+There are two primary ways to use MongoDB to store our data. The first option is to download MongoDB and run it on a *server* (in this case, locally on your own computer). The second option is to use MongoDB's service called *Atlas*. MongoDB Atlas is a convenient option for developers looking to focus on their code and not on managing a physical server. Atlas facilitates the management of a running MongoDB on the cloud (using AWS, GCP, or Azure) so that developers don't have to worry about it.
 
 Both options have their pros and cons, but we're going to focus on using Atlas in this workshop. As the tech industry continues to embrace cloud computing, Atlas has continued to become a strong option for MongoDB customers.
 
-*Note: You may be worrying about using Atlas because you don't want to pay to use it, or even input your credit card information. There's good news! Atlas has multiple tiers of the product, each of which are offered at different price points. The lowest price point is called the Free Tier! This tier allows developers to use Atlas on a shared cluster without paying at all. You don't even need to enter any payment information! This is a really great option for learning, building proof-of-concepts, or launching a product that will start with a small data footprint (you  always upgrade whenever you want — or never if you don't want to).*
+*Note: You may be worrying about using Atlas because you don't want to pay to use it, or even input your credit card information. There's good news! Atlas has multiple tiers of the product, each of which are offered at different price points. The lowest price point is called the Free Tier! This tier allows developers to use Atlas on a shared cluster without paying at all. You don't even need to enter any payment information! This is a really great option for learning, building proof-of-concepts, or launching a product that will start with a small data footprint (you can always upgrade whenever you want — or never if you don't want to).*
 
 ### MongoDB Atlas 🌍
 
 Here are some simple steps for getting started with MongoDB Atlas!
-- Head over to [MongoDB's Atlas Page](https://www.mongodb.com/cloud/atlas)
-- Choose the option to start for free. You'll be prompted to create an account (don't worry, you won't have to put any payment info). Fill out any account information that they may ask for.
+1. Head over to [MongoDB's Atlas Page](https://www.mongodb.com/cloud/atlas)
+2. Choose the option to start for free. You'll be prompted to create an account (don't worry, you won't have to put any payment info). Fill out any account information that they may ask for.
     - If you already have an account, go ahead and log in!
-- You will prompted to choose from some options to create your cluster. The free tier options will be clearly labeled so be sure to pick those. Choose a cloud provider, one of the provider's servers, and select an **M0** cluster. You can then name your cluster and hit the "Create Cluster" button!
-- After doing this, you'll be brought to the dashboard for your cluster! Congrats, this means you have a databasre ready for you to use! There should be a quick tutorial on the page giving you the inside scoop on how to use the various sections. Feel free to check that out if you'd like! This workshop will also provide instructions on how to use Atlas (*but the more the merrier, right?*).
+3. You will prompted to choose from some options to create your cluster. The free tier options will be clearly labeled so be sure to pick those. Choose a cloud provider, one of the provider's servers, and select an **M0** cluster. You can then name your cluster and hit the "Create Cluster" button!
+4. After doing this, you'll be brought to the dashboard for your cluster! Congrats, this means you have a database ready for you to use! There should be a quick tutorial on the page giving you the inside scoop on how to use the various sections. Feel free to check that out if you'd like! This workshop will also provide instructions on how to use Atlas (*but the more the merrier, right?*).
 
 ### Get Your Data On! 📚
 
@@ -224,17 +224,21 @@ To load the sample data, hit the "..." button on your cluster. This button will 
 
 ### Safe and Secure 🔐
 
-We also need to be sure that our cluster is safe. Head over to the "Network Access" page (the link should be on the left side of the screen, near the other Security pages). Here we can specify IP addresses that will be allowed to access our cluster. Hit "Add IP Address." The resulting menu should allow you to enter some an IP address with a comment. If you know your desired IP address by heart, then feel free to put that in there! Don't fret if you don't remember an IP address by heart, that's not a requirement! There are also options to allow your current IP address and allow access from anywhere. We suggest allowing your current IP address. Allowing access from anywhere puts your cluster at risk of being attacked.
+We also need to be sure that our cluster is safe.
 
-We also need to add authorized users to our cluster. Head over to the "Database Access" page (the link should be nearby the "Network Access" link) and select "Add New Database User." Enter a username and password into the form and select your preferred choices for that user's access. Feel free to stick with the default options if you want!
+1. Head over to the "Network Access" page (the link should be on the left side of the screen, near the other Security pages). Here we can specify IP addresses that will be allowed to access our cluster.
+
+2. Hit "Add IP Address." The resulting menu should allow you to enter some an IP address with a comment. If you know your desired IP address by heart, then feel free to put that in there! Don't fret if you don't remember an IP address by heart, that's not a requirement! There are also options to allow your current IP address and allow access from anywhere. We suggest allowing your current IP address. Allowing access from anywhere puts your cluster at risk of being attacked.
+
+3. We also need to add authorized users to our cluster. Head over to the "Database Access" page (the link should be nearby the "Network Access" link) and select "Add New Database User." Enter a username and password into the form and select your preferred choices for that user's access. Feel free to stick with the default options if you want!
 
 ### Let's Get Connected ⛓
 
 We now have a database that is ready to be used! Our final step before making some queries will be to connect to the Database!
 
-Nearby the name of your cluster, there will be a button that says "Connect." Hit that button to bring up a menu for connecting to the database! There are 3 options for connecting to our cluster: the mongo shell, connecting an application (i.e. using code), and MongoDB Compass. Today we'll be using the mongodb shell, but if you are interested in the other methods, you can check out the [connection documentation](https://docs.atlas.mongodb.com/connect-to-cluster/#connect-to-a-cluster). All of the offered options are free and really cool! The mongo shell is the simplest and easiest to get started with, so we'll be using that!
+1. Nearby the name of your cluster, there will be a button that says "Connect." Hit that button to bring up a menu for connecting to the database! There are 3 options for connecting to our cluster: the mongo shell, connecting an application (i.e. using code), and MongoDB Compass. Today we'll be using the mongodb shell, but if you are interested in the other methods, you can check out the [connection documentation](https://docs.atlas.mongodb.com/connect-to-cluster/#connect-to-a-cluster). All of the offered options are free and really cool! The mongo shell is the simplest and easiest to get started with, so we'll be using that!
 
-Once you click on "mongo shell," you'll be provided with instructions for how to install and connect to the mongo shell. Follow these to get set up. If you already have the mongo shell installed, then click on "I have mongo shell installed" and follow those instructions instead. Be sure to replace the <dbname> with the name of your database (the cluster's name). You'll prompted for the password you created earlier!
+2. Once you click on "mongo shell," you'll be provided with instructions for how to install and connect to the mongo shell. Follow these to get set up. If you already have the mongo shell installed, then click on "I have mongo shell installed" and follow those instructions instead. Be sure to replace the <dbname> with the name of your database (the cluster's name). You'll prompted for the password you created earlier!
 
 ### Its a *Shell*ebration! 🎊
 
@@ -327,7 +331,7 @@ To test out what you've learned in this section here are some questions about th
 
 - How many movies are longer than `2` hours?
 
-- How many movies fall under the following criteria (*this is a toough one!*):
+- How many movies fall under the following criteria (*this is a tough one!*):
   - came out between `2005` and `2010`
   - have a "rated" value of `"TV-G"`
 
